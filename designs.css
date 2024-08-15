@@ -124,7 +124,7 @@ section{
     font-size: 2rem;
     margin-left: 20px;
         font-weight: bold;
-    font-size: 2vw; /* Adjust as needed */
+    font-size: 5vw; /* Adjust as needed */
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflow text */
   text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
@@ -134,7 +134,7 @@ section{
 .header .logo p {
     font-size: 20px;
     margin-left: 20px;
-    font-size: 1.5vw; /* Adjust as needed */
+    font-size: 3.5vw; /* Adjust as needed */
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflow text */
   text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
