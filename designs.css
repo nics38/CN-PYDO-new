@@ -882,25 +882,30 @@ outline: transparent; /* Remove default outline */
 
 
 
-
-/*MEDIA QUERIES*/
+/* Media Queries */
 
 /* For large desktops and laptops (1200px and up) */
-@media (max-width:1350px){
-    .section{
+@media (max-width: 1350px) {
+    .home {
+        padding: 1rem 2rem; /* Adjust padding for large screens */
+    }
+    .section {
         padding: 3rem 5%;
     }
 }
 
 /* For tablets and small laptops (991px to 1199px) */
-@media (max-width:1345px){
-    html{
+@media (max-width: 1345px) {
+    html {
         font-size: 55%;
     }
-    section{
+    .home {
+        padding: 1rem; /* Adjust padding for medium screens */
+    }
+    section {
         padding: 3rem 2rem;
     }
-    .home .slide .content span{
+    .home .slide .content span {
         font-size: 10vw;
     }
     #menu-btn {
@@ -931,20 +936,19 @@ outline: transparent; /* Remove default outline */
     }
 }
 
-
-}
-
 /* For tablets (768px to 991px) */
-@media (max-width: 768px){
-    #menu-btn{
+@media (max-width: 768px) {
+    .home {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+    }
+    #menu-btn {
         display: inline-block;
         transition: .2s linear;
     }
-    #menu-btn.fa-times{
+    #menu-btn.fa-times {
         transform: rotate(180deg);
     }
-
-    .header .navbar{
+    .header .navbar {
         position: absolute;
         top: 99%; left: 0; right: 0;
         background-color: var(--white);
@@ -953,11 +957,10 @@ outline: transparent; /* Remove default outline */
         transition: .2s linear;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
-    .header .navbar.active{
+    .header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
     }
-    .header .navbar a{
+    .header .navbar a {
         text-decoration: none;
         display: block;
         margin: 2rem;
@@ -970,11 +973,14 @@ outline: transparent; /* Remove default outline */
 }
 
 /* For mobile phones (450px to 767px) */
-@media (max-width: 450px){
-    html{
+@media (max-width: 450px) {
+    html {
         font-size: 50%;
     }
-    .heading-title{
+    .home {
+        padding: 0.5rem; /* Maintain padding for small screens */
+    }
+    .heading-title {
         font-size: 3.5rem;
     }
     .home .slide .content span {
@@ -982,15 +988,13 @@ outline: transparent; /* Remove default outline */
     }
     .header .logo img {
         width: 10%;
-    height: 10%;
-        justify-content: center; /* Center horizontally */
-    align-items: center;
+        height: 10%;
+        display: block; /* Ensure image is centered */
+        margin: 0 auto; /* Center horizontally */
     }
-  .header .logo-text {
+    .header .logo-text {
         font-size: 1.8rem;
-        /* Ensure text wraps properly */
     }
-
 }
 
 /* For very small mobile phones (up to 450px) */
@@ -998,44 +1002,33 @@ outline: transparent; /* Remove default outline */
     html {
         font-size: 48%;
     }
-
     .header .logo {
         font-size: 2rem;
     }
-
-      .header .logo-text {
+    .header .logo-text {
         font-size: 1.5rem;
-        /* Adjust font size for very small screens */
     }
-
     .header .navbar a {
         font-size: 1.8rem;
     }
-
     #menu-btn {
         font-size: 2rem;
     }
-
     .home .slide .content span {
         font-size: 6vw;
     }
-
     .home .slide .content h2 {
         font-size: 1.8rem;
     }
-
     .home-services .box h3 {
         font-size: 2.2rem;
     }
-
     .home-services .box p {
         font-size: 1.2rem;
     }
-
     .about .content {
         font-size: 1.5rem;
     }
-
     .footer .box-container {
         grid-template-columns: 1fr;
     }
