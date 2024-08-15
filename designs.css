@@ -817,6 +817,7 @@ outline: transparent; /* Remove default outline */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    text-decoration: none;
 }
 
 .footer .box-container{
@@ -838,7 +839,7 @@ outline: transparent; /* Remove default outline */
     padding-bottom: 1.5rem;
     display: block;
     text-transform: none;
-
+    text-decoration: none;
 }
 
 .footer .box-container .box a i{
@@ -846,7 +847,8 @@ outline: transparent; /* Remove default outline */
     padding-right: .5rem;
     transition: .2s linear;
     text-transform: none;
-    
+    text-decoration: none;
+
 }
 
 .footer .box-container .box a:hover i{
