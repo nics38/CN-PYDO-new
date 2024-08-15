@@ -124,6 +124,7 @@ section{
 
 .header .logo img {
     max-height: 30%; /* Adjust based on your logo size */
+    align-items: center;
 }
 
 .header .logo-text {
@@ -980,15 +981,23 @@ outline: transparent; /* Remove default outline */
     .home .slide .content span {
         font-size: 10vw;
     }
+
+    .header .logo-text {
+    margin-left: 1px;
+        font-size: 1.8rem;
+        /* Ensure text wraps properly */
+    line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+.header .logo p {
+    margin-left: 1px;
+    font-size: 1.5vw; /* Adjust as needed */
+}
     .header .logo img {
         width: 10%;
     height: 10%;
         justify-content: center; /* Center horizontally */
     align-items: center;
-    }
-  .header .logo-text {
-        font-size: 1.8rem;
-        /* Ensure text wraps properly */
     }
 
 }
