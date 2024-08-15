@@ -123,7 +123,7 @@ section{
 }
 
 .header .logo img {
-    max-height: 50%; /* Adjust based on your logo size */
+    max-height: 30%; /* Adjust based on your logo size */
 }
 
 .header .logo-text {
@@ -137,7 +137,7 @@ section{
 .header .logo p {
     font-size: 20px;
     margin-left: 20px;
-    font-size: 2.5vw; /* Adjust as needed */
+    font-size: 1.5vw; /* Adjust as needed */
 }
 
 .header .navbar {
@@ -981,11 +981,11 @@ outline: transparent; /* Remove default outline */
         font-size: 10vw;
     }
     .header .logo img {
-        width: 30%;
-    height: 30%;
+        width: 10%;
+    height: 10%;
     }
   .header .logo-text {
-        font-size: 3.8rem;
+        font-size: 1.8rem;
         /* Ensure text wraps properly */
     }
 
