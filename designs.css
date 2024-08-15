@@ -128,15 +128,13 @@ section{
 }
 
 .header .logo-text {
-    font-size: 2rem;
+    font-size: 2vw;
     margin-left: 20px;
     font-weight: bold;
     /* Removed white-space and overflow settings to allow wrapping */
-    line-height: 1.2; /* Adjust line height for better spacing */
 }
 
 .header .logo p {
-    font-size: 20px;
     margin-left: 20px;
     font-size: 1.5vw; /* Adjust as needed */
 }
@@ -983,14 +981,14 @@ outline: transparent; /* Remove default outline */
     }
 
     .header .logo-text {
-    margin-left: 1px;
+    margin-left: 10px;
         font-size: 1.8rem;
         /* Ensure text wraps properly */
     line-height: 1.2; /* Adjust line height for better spacing */
 }
 
 .header .logo p {
-    margin-left: 1px;
+    margin-left: 10px;
     font-size: 1.5vw; /* Adjust as needed */
 }
     .header .logo img {
