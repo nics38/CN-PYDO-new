@@ -981,8 +981,8 @@ outline: transparent; /* Remove default outline */
         font-size: 10vw;
     }
     .header .logo img {
-        width: 30rem;
-    height: 30rem;
+        width: 30%;
+    height: 30%;
     }
   .header .logo-text {
         font-size: 3.8rem;
