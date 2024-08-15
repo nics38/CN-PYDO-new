@@ -886,14 +886,14 @@ outline: transparent; /* Remove default outline */
 /*MEDIA QUERIES*/
 
 /* For large desktops and laptops (1200px and up) */
-@media (max-width:1200px){
+@media (max-width:1350px){
     .section{
         padding: 3rem 5%;
     }
 }
 
 /* For tablets and small laptops (991px to 1199px) */
-@media (max-width:991px){
+@media (max-width:1345px){
     html{
         font-size: 55%;
     }
