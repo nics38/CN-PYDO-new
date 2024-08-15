@@ -983,6 +983,8 @@ outline: transparent; /* Remove default outline */
     .header .logo img {
         width: 10%;
     height: 10%;
+        justify-content: center; /* Center horizontally */
+    align-items: center;
     }
   .header .logo-text {
         font-size: 1.8rem;
