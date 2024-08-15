@@ -124,15 +124,12 @@ section{
     font-size: 2rem;
     margin-left: 20px;
         font-weight: bold;
-   /* font-size: 2vw;  Adjust as needed */
+    font-size: 2vw; /* Adjust as needed */
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflow text */
   text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
 }
 
-    .header .logo-text::before {
-        content: "Provincial Youth Development Office";
-    }
 
 .header .logo p {
     font-size: 20px;
