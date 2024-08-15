@@ -124,11 +124,15 @@ section{
     font-size: 2rem;
     margin-left: 20px;
         font-weight: bold;
-    font-size: 2vw; /* Adjust as needed */
+   /* font-size: 2vw;  Adjust as needed */
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflow text */
   text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
 }
+
+    .header .logo-text::before {
+        content: "Provincial Youth Development Office";
+    }
 
 .header .logo p {
     font-size: 20px;
@@ -943,6 +947,7 @@ outline: transparent; /* Remove default outline */
     #menu-btn.fa-times{
         transform: rotate(180deg);
     }
+
     .header .navbar{
         position: absolute;
         top: 99%; left: 0; right: 0;
@@ -978,6 +983,10 @@ outline: transparent; /* Remove default outline */
     }
     .home .slide .content span {
         font-size: 10vw;
+    }
+
+    .header .logo-text::before {
+        content: "PYDO";
     }
 }
 
