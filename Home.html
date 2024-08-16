@@ -307,33 +307,23 @@
             </script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggle = document.getElementById('programsDropdown');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    const navbar = document.querySelector('.navbar');
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.getElementById('programsDropdown');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
 
-    dropdownToggle.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default action if needed (optional)
-        dropdownMenu.classList.toggle('show');
+        dropdownToggle.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default action if needed (optional)
+            dropdownMenu.classList.toggle('show');
+        });
 
-        // Adjust the height of the navbar
-        if (dropdownMenu.classList.contains('show')) {
-            navbar.style.height = (navbar.scrollHeight + dropdownMenu.scrollHeight) + 'px';
-        } else {
-            navbar.style.height = ''; // Reset to default height
-        }
+        // Optional: Close the dropdown if clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
     });
-
-    // Optional: Close the dropdown if clicking outside of it
-    document.addEventListener('click', function(event) {
-        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show');
-            navbar.style.height = ''; // Reset to default height
-        }
-    });
-});
 </script>
-
 
 
 </body>
