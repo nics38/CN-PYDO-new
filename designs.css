@@ -952,14 +952,17 @@ outline: transparent; /* Remove default outline */
         transform: rotate(180deg);
     }
 
-    .header .navbar{
-        position: absolute;
-        top: 99%; left: 0; right: 0;
+        .header .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         background-color: var(--white);
         border-top: var(--border);
-        padding: 2rem;
-        transition: .2s linear;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        padding: 1rem; /* Adjust padding as needed */
+        clip-path: none;
+        display: block;
+        box-sizing: border-box; /* Ensure padding and borders are included in the width */
     }
     .header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -977,8 +980,9 @@ outline: transparent; /* Remove default outline */
     }
 
     .dropdown-menu {
-        position: static; /* Ensure the dropdown menu flows naturally in the layout */
-        width: 100%; /* Adjust width for mobile */
+        position: static; /* Ensure the dropdown flows naturally in the layout */
+        width: 100%; /* Full width on mobile */
+        box-sizing: border-box; /* Ensure padding and borders are included in the width */
     }
 
     .dropdown-menu.show {
