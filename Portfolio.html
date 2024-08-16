@@ -195,29 +195,31 @@ body {
             font-size: 0.6em;
         }
 
-        .dropdown-menu {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            z-index: 1000;
-        }
+        /* Dropdown menu styles */
+.dropdown-menu {
+    display: none; /* Hide by default */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: absolute; /* Position relative to the parent */
+    top: 100%; /* Align dropdown menu with the bottom of the parent link */
+    left: 0; /* Align dropdown menu to the left of the parent link */
+    z-index: 1000; /* Ensure it appears above other content */
+}
 
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            opacity: 1;
-            visibility: visible;
-        }
+/* Dropdown menu visible state */
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible; /* Ensure it is visible */
+}
 
-        .dropdown-menu {
-            pointer-events: auto;
-        }
-
+/* Prevent dropdown from closing when clicking inside */
+.dropdown-menu {
+    pointer-events: auto; /* Allow interaction with menu items */
+}
 
     </style>
 </head>
@@ -239,12 +241,14 @@ body {
             <a href="About.html">About</a>
 
             <div class="dropdown">
-                <a href="Portfolio.html" class="nav-link dropdown-toggle active" id="portfoliosDropdown" role="button"
-                    aria-expanded="false">Portfolio</a>
-                <ul class="dropdown-menu" aria-labelledby="programsDropdown">
-                    <li><a class="dropdown-item" href="Programs.html">Programs</a></li>
-                </ul>
-            </div>
+            <a href="Programs.html" class="nav-link">
+                Programs
+                <span class="dropdown-toggle" id="programsDropdown" role="button"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+                <li><a class="dropdown-item" href="Portfolio.html">Portfolio</a></li>
+            </ul>
+        </div>
 
             <a href="Advocacy.html">Advocacy</a>
         </nav>
@@ -983,7 +987,24 @@ lightbox.onclick = function(event) {
 
     </script>
 
-    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.getElementById('programsDropdown');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        dropdownToggle.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default action if needed (optional)
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Optional: Close the dropdown if clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
 
     
 
