@@ -975,6 +975,17 @@ outline: transparent; /* Remove default outline */
     .home .slide .content span {
         font-size: 10vw;
     }
+
+    .dropdown-menu {
+        position: static; /* Ensure the dropdown menu flows naturally in the layout */
+        width: 100%; /* Adjust width for mobile */
+    }
+
+    .dropdown-menu.show {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 /* For mobile phones (450px to 767px) */
