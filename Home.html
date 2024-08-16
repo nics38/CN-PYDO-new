@@ -65,20 +65,15 @@
             padding: 20px;
             text-align: center;
         }
-        .dropdown {
-            position: relative; /* Make sure dropdown is positioned relative to this parent */
-        }
+    
         
-        /* Dropdown toggle triangle */
-       .dropdown-toggle::after {
-    content: '\f078'; /* Font Awesome down arrow */
-    font-family: "Font Awesome 5 Free"; /* Specify Font Awesome */
-    font-weight: 900; /* Necessary for Font Awesome icons */
-    margin-left: 5px;
-    font-size: 0.6em;
-}
-        
-       /* Dropdown menu styles */
+.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Remove the gap so it aligns well with the navbar */
+        transition: all 0.3s ease;
+    }
+
+/* Dropdown menu styles */
 .dropdown-menu {
     display: none; /* Hide by default */
     opacity: 0; /* Initially invisible */
@@ -102,6 +97,12 @@
 /* Prevent dropdown from closing when clicking inside */
 .dropdown-menu {
     pointer-events: auto; /* Allow interaction with menu items */
+}
+    .navbar a:focus,
+    .navbar a:active,
+    .navbar a:visited {
+    background-color: transparent; /* Remove or adjust background color */
+    outline: transparent; /* Remove default outline */
 }
     </style>
     
