@@ -20,6 +20,87 @@
 
     <!-- CUSTOM CSS FILE LINK -->
     <link rel="stylesheet" href="designs.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1000;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+        .dropdown {
+            position: relative; /* Make sure dropdown is positioned relative to this parent */
+        }
+        
+        /* Dropdown toggle triangle */
+        .dropdown-toggle::after {
+            content: '\25BC'; /* Adds the triangle */
+            margin-left: 5px;
+            font-size: 0.6em;
+        }
+        
+        /* Dropdown menu styles */
+.dropdown-menu {
+    display: none; /* Hide by default */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: absolute; /* Position relative to the parent */
+    top: 100%; /* Align dropdown menu with the bottom of the parent link */
+    left: 0; /* Align dropdown menu to the left of the parent link */
+    z-index: 1000; /* Ensure it appears above other content */
+    pointer-events: auto; /* Allow interaction with menu items */
+}
+
+/* Ensure dropdown menu is clickable */
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible; /* Ensure it is visible */
+}
+
+/* Prevent other elements from being covered */
+.navbar {
+    position: relative; /* Ensure that dropdown menu is positioned correctly relative to the navbar */
+}
+
+
+    </style>
+    
 </head>
 
 <body>
