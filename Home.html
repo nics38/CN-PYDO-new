@@ -73,18 +73,24 @@
         transition: all 0.3s ease;
     }
 
-/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+}
+
 .dropdown-menu {
-    display: none; /* Hide by default */
-    opacity: 0; /* Initially invisible */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
-    position: absolute; /* Position relative to the parent */
-    top: 100%; /* Align dropdown menu with the bottom of the parent link */
-    left: 0; /* Align dropdown menu to the left of the parent link */
-    z-index: 1000; /* Ensure it appears above other content */
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* Ensure full width of the dropdown menu */
+    z-index: 1000;
+    background-color: var(--white);
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 /* Dropdown menu visible state */
