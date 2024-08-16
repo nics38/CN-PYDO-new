@@ -185,17 +185,13 @@ body {
     cursor: pointer;
 }
 
-        .dropdown {
-            position: relative;
-        }
+        .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Remove the gap so it aligns well with the navbar */
+        transition: all 0.3s ease;
+    }
 
-        .dropdown-toggle::after {
-            content: '\25BC';
-            margin-left: 5px;
-            font-size: 0.6em;
-        }
-
-        /* Dropdown menu styles */
+/* Dropdown menu styles */
 .dropdown-menu {
     display: none; /* Hide by default */
     opacity: 0; /* Initially invisible */
@@ -220,7 +216,12 @@ body {
 .dropdown-menu {
     pointer-events: auto; /* Allow interaction with menu items */
 }
-
+    .navbar a:focus,
+    .navbar a:active,
+    .navbar a:visited {
+    background-color: transparent; /* Remove or adjust background color */
+    outline: transparent; /* Remove default outline */
+}
     </style>
 </head>
 
