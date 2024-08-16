@@ -76,31 +76,31 @@
             font-size: 0.6em;
         }
         
-        /* Dropdown menu styles */
-        .dropdown-menu {
-            display: none; /* Hide by default */
-            opacity: 0; /* Initially invisible */
-            transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
-            list-style: none; /* Remove bullet points */
-            margin: 0; /* Remove margin */
-            padding: 0; /* Remove padding */
-            position: absolute; /* Position relative to the parent */
-            top: 100%; /* Align dropdown menu with the bottom of the parent link */
-            left: 0; /* Align dropdown menu to the left of the parent link */
-            z-index: 1000; /* Ensure it appears above other content */
-        }
-        
-        /* Dropdown menu visible state */
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            opacity: 1;
-            visibility: visible; /* Ensure it is visible */
-        }
-        
-        /* Prevent dropdown from closing when clicking inside */
-        .dropdown-menu {
-            pointer-events: auto; /* Allow interaction with menu items */
-        }
+       /* Dropdown menu styles */
+.dropdown-menu {
+    display: none; /* Hide by default */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    position: absolute; /* Position relative to the parent */
+    top: 100%; /* Align dropdown menu with the bottom of the parent link */
+    left: 0; /* Align dropdown menu to the left of the parent link */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Dropdown menu visible state */
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible; /* Ensure it is visible */
+}
+
+/* Prevent dropdown from closing when clicking inside */
+.dropdown-menu {
+    pointer-events: auto; /* Allow interaction with menu items */
+}
     </style>
     
 
@@ -299,6 +299,25 @@
             // Hide the loader when the page is fully loaded
             document.getElementById('loader-container').style.display = 'none'; });
             </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.getElementById('programsDropdown');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        dropdownToggle.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default action if needed (optional)
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Optional: Close the dropdown if clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
 
 
 </body>
