@@ -60,18 +60,13 @@
             padding: 20px;
             text-align: center;
         }
-        .dropdown {
-            position: relative; /* Make sure dropdown is positioned relative to this parent */
-        }
-        
-        /* Dropdown toggle triangle */
-        .dropdown-toggle::after {
-            content: '\25BC'; /* Adds the triangle */
-            margin-left: 5px;
-            font-size: 0.6em;
-        }
-        
-        /* Dropdown menu styles */
+       .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Remove the gap so it aligns well with the navbar */
+        transition: all 0.3s ease;
+    }
+
+/* Dropdown menu styles */
 .dropdown-menu {
     display: none; /* Hide by default */
     opacity: 0; /* Initially invisible */
@@ -83,21 +78,25 @@
     top: 100%; /* Align dropdown menu with the bottom of the parent link */
     left: 0; /* Align dropdown menu to the left of the parent link */
     z-index: 1000; /* Ensure it appears above other content */
-    pointer-events: auto; /* Allow interaction with menu items */
 }
 
-/* Ensure dropdown menu is clickable */
+/* Dropdown menu visible state */
 .dropdown-menu.show {
     display: block;
     opacity: 1;
     visibility: visible; /* Ensure it is visible */
 }
 
-/* Prevent other elements from being covered */
-.navbar {
-    position: relative; /* Ensure that dropdown menu is positioned correctly relative to the navbar */
+/* Prevent dropdown from closing when clicking inside */
+.dropdown-menu {
+    pointer-events: auto; /* Allow interaction with menu items */
 }
-
+    .navbar a:focus,
+    .navbar a:active,
+    .navbar a:visited {
+    background-color: transparent; /* Remove or adjust background color */
+    outline: transparent; /* Remove default outline */
+}
 
     </style>
     
